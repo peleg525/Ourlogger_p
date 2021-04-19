@@ -1,8 +1,8 @@
 from distutils.core import setup
 
 setup(
-name = 'Ourlogger',         # How you named your package folder (MyLib)
-  packages = ['Ourlogger'],   # Chose the same as "name"
+name = 'Ourlogger_p',         # How you named your package folder (MyLib)
+  packages = ['Ourlogger_p'],   # Chose the same as "name"
   version = '0.1',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'Creat logger object in order to push him to logs table - digital_data.models_logs',   # Give a short description about your library
