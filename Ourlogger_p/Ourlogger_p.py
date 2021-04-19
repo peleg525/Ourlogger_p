@@ -6,7 +6,7 @@ import teradatasql
 
 class logger:
     """
-    Creat logger object in order to push him to logs table - d_digital_data.models_logs
+    Creat logger object in order to push him to logs table - digital_data.models_logs
     """
     def __init__(self, name, owner, schema, table_name):
         """
@@ -30,7 +30,7 @@ class logger:
     
     def push(self, rows_length):
         """
-        Insert log values to teradata - d_digital_data.models_logs.
+        Insert log values to teradata - digital_data.models_logs.
         
         ARGS:
         rows_length - Int
@@ -38,7 +38,7 @@ class logger:
         Return:
         None
         """
-        tableName = 'd_digital_data.models_logs'
+        tableName = 'digital_data.models_logs'
         self.end = datetime.now()
         self.rows_length = rows_length
         with teradatasql.connect('{"host":"tdprd","logmech":"krb5"}') as con:
@@ -48,7 +48,7 @@ class logger:
                 
     def push_error(self, error_msg='', notes='', rows_length=0):
         """
-        Updates the error values and push them to logs table - d_digital_data.models_logs
+        Updates the error values and push them to logs table - digital_data.models_logs
         
         ARGS:
         error_msg - String - python error message
